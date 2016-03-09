@@ -43,15 +43,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        
+                    <div class="col-md-6 header__phones">
+                        <div class="col-md-2">RU</div>
+                        <div class="col-md-4 contact"><a href="#">Контакты</a></div>
+                        <div class="col-md-4 press"><a href="#">Пресс-центр</a></div>
                     </div>
                 </div>
             </div>
         </span>
     </div>
     <div class="nav-wrapper">
-        <span class="container clearfix">
             <nav id="nav" class="nav <?php echo wp_is_mobile()?'mobile-nav':'dropdown-nav'?>">
                 <ul class="menu">
                     <?php wyde_primary_menu(); ?>
@@ -69,7 +70,6 @@
                 <?php get_template_part('/inc/ajax-search');?>
             </div>
             <?php } ?>
-        </span>
     </div>
 </div>
 <?php endif ?>

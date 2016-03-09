@@ -688,6 +688,9 @@ body.wide #header:not(.mobile).full .header-wrapper .container{
     position: relative;
     text-align: right;
     white-space: nowrap;
+    border-bottom: 1px solid #707c87;
+    border-top: 1px solid #707c87;
+    padding: 8px 0px;
 }
 
 #nav{
@@ -1265,9 +1268,7 @@ button.search-button:hover{
     background:none;
 }
 
-#header.header-v5 #logo{
-    border-bottom: 1px solid #e1e1e1;
-}
+
 
 #header.mobile.header-v5 #logo{
     border: none;
@@ -9217,9 +9218,7 @@ button.search-button:hover{
     background:none;
 }
 
-#header.header-v5 #logo{
-    border-bottom: 1px solid #e1e1e1;
-}
+
 
 #header.mobile.header-v5 #logo{
     border: none;
@@ -16286,3 +16285,29 @@ testimonials-slider show-navigation
 		display: block;
 		padding: 7px 0px;
 	}
+
+.header__phones div{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.header__phones .contact{
+	background-image: url("/wp-content/themes/Vela/images/cons/mark.png");
+	background-position: left 34px center;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+}
+.header__phones .press{
+	background-image: url("/wp-content/themes/Vela/images/cons/mark2.png");
+	background-position: left 20px center;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+}
+.header__phones a{
+	display: inline-block;
+	background-image: url("/wp-content/themes/Vela/images/cons/border.svg");
+	background-size: 100% 100%;
+	background-position: center;
+	padding: 23px 5px;
+	width: 100%;
+	color: #fff;
+}
