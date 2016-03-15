@@ -44,6 +44,10 @@ function wyde_get_header($allow_transparency=true){
     } 
 
 ?>
+
+
+
+<?php if (is_front_page()): ?>
 <header id="header" class="<?php echo esc_attr(  implode(' ', $header_classes) ); ?>">
     <div class="header-wrapper">
         <?php
@@ -51,6 +55,20 @@ function wyde_get_header($allow_transparency=true){
         ?> 
     </div>
 </header>
+<?php endif ?>
+
+<?php if (!is_front_page()): ?>
+<header id="header" class="heder-mod <?php echo esc_attr(  implode(' ', $header_classes) ); ?>">
+    <div class="header-wrapper">
+        <?php
+        get_template_part( 'inc/headers/header', 'v'. intval( $wyde_options['header_layout'] ) );
+        ?> 
+    </div>
+</header>
+<?php endif ?>
+
+
+
 <?php
 }
 ?>

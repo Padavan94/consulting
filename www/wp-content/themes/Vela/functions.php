@@ -132,10 +132,19 @@ function vela_load_styles(){
 
     wp_register_style('bootstrap', $asset_base_uri . '/css/bootstrap.min.css', null, null);
     wp_enqueue_style('bootstrap');
+
+
     
     wp_deregister_style('vc_pageable_owl-carousel-css');
     wp_deregister_style('vc_pageable_owl-carousel-css-theme');
     wp_enqueue_style('owl-carousel', $asset_base_uri . '/css/owl.carousel.min.css', null, null);
+
+    wp_deregister_style('qweqwe');
+    wp_deregister_style('qweqwe-theme');
+    wp_enqueue_style('magnific', $asset_base_uri . '/css/magnific-popup.css', null, null);
+
+    
+
 
     wp_deregister_style('flexslider');
     wp_register_style('flexslider', $asset_base_uri . '/css/flexslider.min.css', null, null);
@@ -203,6 +212,9 @@ function vela_load_scripts(){
 
     wp_register_script('owl', $asset_base_uri . '/js/owl.carousel.min.js', array('jquery'), null, false);
     wp_enqueue_script('owl');
+
+    wp_register_script('magnific', $asset_base_uri . '/js/jquery.magnific-popup.min.js', array('jquery'), null, false);
+    wp_enqueue_script('magnific');
 
     wp_register_script('wyde-plugins', $asset_base_uri . '/js/plugins'.$min.'.js', array('jquery'), '1.5.5', true);
     wp_enqueue_script('wyde-plugins');
@@ -304,6 +316,7 @@ function vela_load_admin_scripts(){
 
     wp_register_style('vela-animation', $asset_base_uri . '/css/animation.min.css', null, null);
     wp_enqueue_style('vela-animation');
+
 
 }
 add_action( 'admin_enqueue_scripts', 'vela_load_admin_scripts');
@@ -571,3 +584,5 @@ function register_required_plugins() {
 	tgmpa($plugins, $config);
 }
 add_action('tgmpa_register', 'register_required_plugins' );
+
+
