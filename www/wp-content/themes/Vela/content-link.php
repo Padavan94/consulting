@@ -52,7 +52,7 @@
         <div class="post-summary">
         <?php the_excerpt(); ?>
         </div>
-        <p class="post-more"><a class="ghost-button" href="<?php  echo esc_url( get_permalink() ) ;?>"><?php echo __('Read More', 'Vela'); ?></a></p>
+        <p class="post-more"><a class="ghost-button" href="<?php  echo esc_url( get_permalink() ) ;?>"><?php echo __('Далее', 'Vela'); ?></a></p>
         <?php } ?>
     </div>
 </article>

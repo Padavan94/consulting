@@ -23,7 +23,7 @@ if($wyde_options['search_items']) {
                 if(strlen( trim(get_search_query()) ) != 0 ):
                 ?>
                 <p class="search-query">
-				<?php echo __('Search Results for', 'Vela')?>: <?php echo get_search_query(); ?>    
+				<?php echo __('Результаты поиска', 'Vela')?>: <?php echo get_search_query(); ?>    
                 </p>
                 <?php
                 if ( have_posts() ) {

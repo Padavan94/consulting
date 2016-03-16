@@ -45,8 +45,8 @@
                     </div>
                     <div class="col-md-6 header__phones">
                         <div class="col-md-2">RU</div>
-                        <div class="col-md-4 contact"><a href="#">Контакты</a></div>
-                        <div class="col-md-4 press"><a href="#">Пресс-центр</a></div>
+                        <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакты" ?>">Контакты</a></div>
+                        <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/пресс-центр" ?>">Пресс-центр</a></div>
                     </div>
                 </div>
             </div>
@@ -108,8 +108,8 @@
                     </div>
                     <div class="col-md-6 header__phones">
                         <div class="col-md-2">RU</div>
-                        <div class="col-md-4 contact"><a href="#">Контакты</a></div>
-                        <div class="col-md-4 press"><a href="#">Пресс-центр</a></div>
+                        <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакты" ?>">Контакты</a></div>
+                        <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/пресс-центр" ?>">Пресс-центр</a></div>
                     </div>
                 </div>
             </div>

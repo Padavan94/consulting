@@ -411,7 +411,54 @@ function wyde_post_meta(){
     if(!$wyde_blog_layout) $wyde_blog_layout = $wyde_options['blog_layout'];
     
     ?>
-    
+    <div class="post-meta">
+            <span class="post-datetime">
+                <?php if(is_single()){ ?>
+                <span class="date"><a href="<?php echo esc_url( get_day_link( get_the_date('Y'), get_the_date('m'), get_the_date('d') ) );?>"><?php echo get_the_date();?></a></span>
+                <?php } ?>
+                <?php if($wyde_options['blog_meta_time']){ ?>
+                <span class="time"><?php echo get_post_time('g:i A'); ?></span>
+                <?php } ?>
+            </span>
+            <?php if($wyde_options['blog_meta_author']){?>
+            <span class="post-author">
+                <strong><?php echo __('Разместил', 'Vela');?></strong><?php echo the_author_posts_link();?>
+            </span>
+            <?php }?>
+            <?php if($wyde_options['blog_meta_category']){?>
+            <span class="post-category">
+                <strong><?php echo __('Рубрика', 'Vela');?></strong><?php echo get_single_category(); ?>
+            </span>  
+            <?php }?>
+            <?php
+            edit_post_link('<i class="fa fa-edit"></i>' );
+		    ?>
+            <div class="meta-right">
+            <?php
+		    if ($wyde_options['blog_meta_comment']  && ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
+		    ?>
+		    <span class="comments-link"><?php comments_popup_link( '<i class="fa fa-comment-o"></i>0', '<i class="fa fa-comment"></i>1', '<i class="fa fa-comment"></i>%'); ?></span>
+		    <?php
+		    endif;
+            ?>
+            <?php if($wyde_options['blog_meta_share']){ ?>
+            <div class="share-icons navbar-right">
+                <a href="#"><i class="fa fa-share-alt"></i></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( esc_url( get_permalink() ) );?>" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?source=webclient&amp;url=<?php echo urlencode( esc_url( get_permalink() ) );?>&amp;text=<?php echo urlencode( get_the_title() );?>" target="_blank"><i class="fa fa-twitter"></i>Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/share?url=<?php echo urlencode( esc_url( get_permalink() ) );?>" target="_blank"><i class="fa fa-google-plus"></i>Google+</a>
+                    </li>
+                </ul>
+            </div>
+            <?php }?>            
+            </div>
+	</div>
     <?php
 }
 
@@ -483,7 +530,7 @@ function wyde_related_posts(){
         if( $posts->have_posts() ) {
         ?>
         <div class="related-posts">
-            <h3>Похожие записи</h3>
+            <h3><?php echo esc_html( $wyde_options['blog_single_related_title'] );?></h3>
             <ul class="row">
             <?php
             while( $posts->have_posts() ) {
@@ -642,7 +689,7 @@ function wyde_post_nav($pages = 1, $range = 2)
                 previous_post_link('%link', '<i class="fa fa-angle-left"></i>');
                 echo '<div class="post-link clear">';
                 previous_post_link('<span class="thumb">%link</span>', $prev_thumbnail);
-                previous_post_link('<div class="nav-text"><span>'.__('Предыдущая', 'Vela').'</span><h5>%link</h5></div>');
+                previous_post_link('<div class="nav-text"><span>'.__('Предыдущий', 'Vela').'</span><h5>%link</h5></div>');
                 echo '</div>';
 			} 
         ?>
@@ -654,7 +701,7 @@ function wyde_post_nav($pages = 1, $range = 2)
                 next_post_link('%link', '<i class="fa fa-angle-right"></i>');
                 echo '<div class="post-link clear">';
                 next_post_link('<span class="thumb">%link</span>', $next_thumbnail);
-                next_post_link('<div class="nav-text"><span>'.__('Следующая', 'Vela').'</span><h5>%link</h5></div>');
+                next_post_link('<div class="nav-text"><span>'.__('Следующий', 'Vela').'</span><h5>%link</h5></div>');
                 echo '</div>';
 		    } 
         ?>
@@ -736,7 +783,7 @@ function wyde_related_portfolio(){
     if( $posts->have_posts() ) {
     ?>
     <div class="related-posts">
-        <h3>Похожие записи</h3>
+        <h3><?php echo esc_html( $wyde_options['portfolio_related_title'] );?></h3>
         <ul class="row">
         <?php
         while( $posts->have_posts() ) {

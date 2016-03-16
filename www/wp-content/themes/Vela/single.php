@@ -22,8 +22,6 @@ if(!$wyde_sidebar_position) $wyde_sidebar_position = $wyde_options['blog_single_
                 <div class="blog-detail-inner">
                 <?php
                     get_template_part('content', get_post_format()); 
-                                        
-                    if($wyde_options['blog_single_tags']) the_tags('<div class="post-tags"><i class="fa fa-tags"></i> <span class="tag-links">', ', ', '</span></div>' );
                     if($wyde_options['blog_single_nav']) wyde_post_nav();
                 ?>
                 </div>
