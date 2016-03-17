@@ -2084,7 +2084,7 @@ ul.view > li.item:before{
 }
 
 .video .wpb_video_wrapper iframe{
-	height: 443px;
+	min-height: 443px;
 }
 
 .video-wrapper iframe {
@@ -13211,6 +13211,7 @@ ul li:hover .thumb > a img,
 
 .owl-controls {
     text-align: center;
+    margin-top: 30px;
 }
 
 .owl-controls .owl-buttons {
@@ -16189,7 +16190,8 @@ testimonials-slider show-navigation
 /* white title */
 .white__title{
 		font-size: 28px;
-		color: #fff;
+		/* color: #fff; */
+        color: #333;
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 60px !important;
@@ -16197,7 +16199,8 @@ testimonials-slider show-navigation
 		.white__title p{
 			display: inline-block;
 			padding: 20px 15px;
-			border-bottom: 1px solid #cdcdcd;
+			/* border-bottom: 1px solid #cdcdcd; */
+            border-bottom: 1px solid #333;
 			position: relative;
 			letter-spacing: 1.5px;
 			font-family: "fs900";
@@ -16207,7 +16210,7 @@ testimonials-slider show-navigation
 			position: absolute;
 			width: 30px;
 			height: 30px;
-			background-image: url("/wp-content/themes/Vela/images/cons/marker3.png");
+			background-image: url("/wp-content/themes/Vela/images/cons/marker2.png");
 			background-size: 100% 100%;
 			left: 50%;
 			margin-left: -15px;
@@ -16277,6 +16280,48 @@ testimonials-slider show-navigation
 		width: 100%;
 		
 	}
+    .home-page-video__slide2{
+        min-height: 443px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-page-video__slide2 p{
+        display: table-cell;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+        color: #fff;
+        font-family: "fs100";
+        font-size: 33px;
+        line-height: 38px;
+        width: 474px;
+        height: 457px;
+        padding: 130px 70px;
+        background-image: url("/wp-content/themes/Vela/images/cons/slider-b.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+        .home-page-video__slide2 p:after{
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-image: url("/wp-content/themes/Vela/images/cons/earth.png");
+            background-position: center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            top: 70px;
+            margin-left: -20px;
+        }
+        .home-page-video__slide2 p strong{
+            font-family: "fs900";
+            line-height: 38px;
+        }
+
 	.home-page-video__owl__item img{
 		width: auto !important;
 		height: auto !important;
@@ -16360,6 +16405,9 @@ testimonials-slider show-navigation
 	padding-left: 5px;
 	padding-right: 5px;
 }
+.header__phones .lang{
+	color: #fff;
+}
 .header__phones .contact{
 	background-image: url("/wp-content/themes/Vela/images/cons/mark.png");
 	background-position: left 48px center;
@@ -16373,7 +16421,7 @@ testimonials-slider show-navigation
 }
 .header__phones a{
 	display: inline-block;
-	background-image: url("/wp-content/themes/Vela/images/cons/border.svg");
+	background-image: url("/wp-content/themes/Vela/images/cons/border123.png");
 	background-size: 100% 100%;
 	background-position: center;
 	padding: 12px 5px;
@@ -16425,23 +16473,27 @@ testimonials-slider show-navigation
 /* content-wrapper-red */
 
 .content-wrapper-red{
-	background-color: #d7172f;
-	background-image: url("/wp-content/themes/Vela/images/cons/footer-bg.png");
+	/* background-color: #d7172f; */
+	/* background-image: url("/wp-content/themes/Vela/images/cons/footer-bg.png"); */
+    background-color: #f8f6f6;
     background-size: auto !important;
     background-repeat: repeat;
     background-position: auto !important;
 }
 
 	.content-wrapper-red .text{
-		color: #fff;
+		/* color: #fff; */
+        color: #485c7a;
 		font-family: "fs100";
 		font-size: 17px;
 	}
 	.content-wrapper-red .text p{
-		color: #fff;
+		/* color: #fff; */
+        color: #485c7a;
 	}
 	.content-wrapper-red .text h5{
-		color: #fff;
+		/* color: #fff; */
+        color: #485c7a !important;
 		text-align: center;
 		margin: 10px 0px 20px 0px;
 		font-family: "fs700" !important;
@@ -16882,18 +16934,18 @@ testimonials-slider show-navigation
 
 
 
-.ubermenu.ubermenu-main.ubermenu-horizontal .ubermenu-submenu-drop.ubermenu-submenu-align-full_width{
-	overflow-y: auto !important;
-	max-height: 600px !important;
-	padding-bottom: 50px !important; 
-}
+/* .ubermenu.ubermenu-main.ubermenu-horizontal .ubermenu-submenu-drop.ubermenu-submenu-align-full_width{
+    overflow: auto !important;
+    max-height: 600px !important;
+    padding-bottom: 50px !important; 
+} */
 
 .ubermenu-main .ubermenu-item-level-0 > .ubermenu-target{
   font-family: "fs300" !important;
-  padding: 25px 15px !important;
+  padding: 15px 15px !important;
 }
 .ubermenu-main .ubermenu-item-level-0 > .ubermenu-target{
-  font-size: 15px !important;
+  font-size: 13px !important;
 }
 
 .ubermenu-sub-indicators .ubermenu-has-submenu-drop > .ubermenu-target::after{
@@ -16968,7 +17020,7 @@ testimonials-slider show-navigation
 		background-position: center;
 		position: absolute;
 		left: 0;
-		top: 20px;
+		top: 9px;
 	}
 
 .ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop,
@@ -16980,8 +17032,8 @@ testimonials-slider show-navigation
 	padding: 10px 10px 25px 10px;
 }
 .ubermenu .ubermenu-submenu-type-stack > .ubermenu-item-normal > .ubermenu-target{
-	padding-top: 12px !important;
-	padding-bottom: 12px !important;
+	padding-top: 3px !important;
+	padding-bottom: 6px !important;
 }
 
 
