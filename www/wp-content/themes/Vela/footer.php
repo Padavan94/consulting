@@ -2,7 +2,7 @@
 global $wyde_options, $wyde_page_id;
 $footer_col = $wyde_options['footer_bar_columns']=='2'? 'col-sm-6':'col-sm-12';
 ?>          
-        </div><!--#content-->
+        </div><!--content-->
         <?php if( get_post_meta( $wyde_page_id, '_meta_page_footer', true ) != 'hide' ){  ?>
         <footer id="footer">
             <?php
@@ -38,7 +38,7 @@ $footer_col = $wyde_options['footer_bar_columns']=='2'? 'col-sm-6':'col-sm-12';
 	    </footer>
         <?php } ?>
         <?php if($wyde_options["totop_button"]){ ?>
-        <a id="toTop" href="#">
+        <a id="toTop" href="">
             <span class="border">
                 <i class="fa fa-angle-up"></i>
             </span>
@@ -47,7 +47,7 @@ $footer_col = $wyde_options['footer_bar_columns']=='2'? 'col-sm-6':'col-sm-12';
         <?php //include_once get_template_directory() . '/style-selector.php'; //for demo only ?>
         <?php wyde_footer_content(); ?>
         </div><!--.page-inner-->
-    </div><!--#page-->
+    </div><!--page-->
     <div id="preloader">
         <?php
             $loader_version = isset($wyde_options['page_loader'])? $wyde_options['page_loader']:'1';
@@ -57,6 +57,6 @@ $footer_col = $wyde_options['footer_bar_columns']=='2'? 'col-sm-6':'col-sm-12';
         </div>
     </div>
     <?php wp_footer(); ?>
-</div><!--#container-->
+</div><!--container-->
 </body>
 </html>

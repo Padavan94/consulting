@@ -2,7 +2,7 @@
     global $wyde_options;    
 ?>
 <?php if (is_front_page()): ?>
-<div class="header">
+<div class="header <?php echo pll_current_language(); ?>">
     <div class="container">
         <div class="mobile-nav-icon">
             <i class="fa fa-bars"></i>
@@ -47,8 +47,23 @@
                         <div class="col-md-2">
                             <?php pll_the_languages(array('show_flags'=>1,'show_names'=>1, 'dropdown'=>1, 'display_names_as' => 'slug'));?>
                         </div>
-                        <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакты" ?>">Контакты</a></div>
-                        <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/пресс-центр" ?>">Пресс-центр</a></div>
+
+                        <?php if(pll_current_language() === "ru"): ?>
+                            <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакты" ?>">Контакты</a></div>
+                            <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/пресс-центр" ?>">Пресс-центр</a></div>
+                        <?php endif ?>
+
+                        <?php if(pll_current_language() === "en"): ?>
+                            <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/contacts" ?>">Contacts</a></div>
+                            <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/press-center" ?>">Press center</a></div>
+                        <?php endif ?>
+
+                        <?php if(pll_current_language() === "uk"): ?>
+                            <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакти" ?>">Контакти</a></div>
+                            <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/прес-центр" ?>">Прес-центр</a></div>
+                        <?php endif ?>
+
+
                     </div>
                 </div>
             </div>
@@ -67,7 +82,7 @@
 
 
 <?php if(!is_front_page()): ?>
-    <div class="header">
+    <div class="header <?php echo pll_current_language(); ?>">
     <div class="container">
         <div class="mobile-nav-icon">
             <i class="fa fa-bars"></i>
