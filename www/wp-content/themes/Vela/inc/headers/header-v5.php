@@ -44,7 +44,9 @@
                         </div>
                     </div>
                     <div class="col-md-6 header__phones">
-                        <div class="col-md-2 lang">RU</div>
+                        <div class="col-md-2">
+                            <?php pll_the_languages(array('show_flags'=>1,'show_names'=>1, 'dropdown'=>1, 'display_names_as' => 'slug'));?>
+                        </div>
                         <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакты" ?>">Контакты</a></div>
                         <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/пресс-центр" ?>">Пресс-центр</a></div>
                     </div>
@@ -107,7 +109,9 @@
                         </div>
                     </div>
                     <div class="col-md-6 header__phones">
-                        <div class="col-md-2 lang">RU</div>
+                        <div class="col-md-2">
+                            <?php pll_the_languages(array('show_flags'=>1,'show_names'=>1, 'dropdown'=>1, 'display_names_as' => 'slug'));?>
+                        </div>
                         <div class="col-md-4 contact"><a href="<?php echo get_site_url() ."/контакты" ?>">Контакты</a></div>
                         <div class="col-md-4 press"><a href="<?php echo get_site_url() ."/пресс-центр" ?>">Пресс-центр</a></div>
                     </div>

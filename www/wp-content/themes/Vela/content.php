@@ -18,8 +18,11 @@
     $post_class[] = $wyde_blog_layout != 'masonry' ? 'clear' : '';
 
 ?>
+
+<?php if( !is_front_page()): ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( implode(' ', $post_class) ); ?>>
-    <div class="post-header<?php echo esc_attr( $content_col ); ?>">
+    <div class="customization post-header<?php echo esc_attr( $content_col ); ?>">
         <?php if(!is_single()){ ?>
         <div class="post-date">
             <span class="date"><?php echo get_the_date(); ?></span>
@@ -55,3 +58,35 @@
         <?php } ?>
     </div>
 </article>
+<?php endif ?>
+
+
+
+
+
+
+<?php if(is_front_page()): ?>
+    
+    <article class="public-article">
+        <div class="public-article__date">
+            <span class="date"><?php echo get_the_date(); ?></span>
+        </div>
+        <div class="clearfix public-article__content-wrap">
+            <div class="public-article__img">
+                <?php
+                if($has_images){
+                    wyde_post_thumbnails($image_size);
+                }else if(!is_single()){
+                    wyde_post_title();
+                }  
+                ?>
+            </div>
+            <div class="public-article__content public-article__content--padding">
+                <?php the_excerpt(); ?>
+            </div>
+        </div>
+        <div class="public-article__more">
+            <a class="public-article__button" href="<?php  echo esc_url( get_permalink() ) ;?>"><?php echo __('Подробнее', 'Vela'); ?></a>
+        </div>
+    </article>
+<?php endif ?>
